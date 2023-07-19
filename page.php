@@ -11,7 +11,7 @@ get_header();
 <!-- CUSTOM CODE  -->
 
 <section class="section">
-<?php
+    <?php
 
 $args = array(
     'posts_per_page' => '3',
@@ -27,15 +27,17 @@ if ( $recent_post->have_posts() ) {
         // var_dump($post);
         ?>
 
-        <article class="article">
-      
-        <a href="<?php the_permalink($post->ID) ?>"><h1><?php the_title(); ?></h1></a>
+    <article class="article">
 
-            <p><?php the_excerpt();?></p>
+        <a href="<?php the_permalink($post->ID) ?>">
+            <h1><?php the_title(); ?></h1>
+        </a>
 
-        </article>
+        <p><?php the_excerpt();?></p>
 
-        <?php
+    </article>
+
+    <?php
 
     }
 
@@ -50,11 +52,11 @@ if ( $recent_post->have_posts() ) {
 
 
 <!-- Blog & Sidebar Section -->
-<section id = 'section-block' class = 'site-content'>
-<div class = 'container'>
-<div class = 'row'>
-<!--Blog Section-->
-<?php
+<section id='section-block' class='site-content'>
+    <div class='container'>
+        <div class='row'>
+            <!--Blog Section-->
+            <?php
 if ( class_exists( 'WooCommerce' ) ) {
 
     if ( is_account_page() || is_cart() || is_checkout() ) {
@@ -69,66 +71,66 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 ?>
 
-<?php
+            <?php
 if ( class_exists( 'WooCommerce' ) ) {
 
     if ( is_account_page() || is_cart() || is_checkout() ) {
 
         // Include the page
         ?>
-        <div class = 'news'>
-        <article class = 'post'>
-        <div class = 'post-content'>
-        <?php
+            <div class='news'>
+                <article class='post'>
+                    <div class='post-content'>
+                        <?php
         the_post();
         the_content();
         ?>
-        </div>
-        </article>
-        </div>
+                    </div>
+                </article>
+            </div>
 
-        <?php
+            <?php
     } else {
 
         // Include the page
         ?>
-        <div class = 'news'>
-        <article class = 'post'>
-        <div class = 'post-content'>
-        <?php
+            <div class='news'>
+                <article class='post'>
+                    <div class='post-content'>
+                        <?php
         the_post();
         the_content();
         ?>
-        </div>
-        </article>
-        </div>
+                    </div>
+                </article>
+            </div>
 
-        <?php
+            <?php
     }
 } else {
     // Include the page
     ?>
-    <div class = 'news'>
-    <article class = 'post'>
-    <div class = 'post-content'>
-    <?php
+            <div class='news'>
+                <article class='post'>
+                    <div class='post-content'>
+                        <?php
     the_post();
     the_content();
     ?>
-    </div>
-    </article>
-    </div>
+                    </div>
+                </article>
+            </div>
 
-    <?php
+            <?php
     comments_template( '', true );
     // show comments
 }
 
 // Start the Loop.
 ?>
-</div>
-<!--/Blog Section-->
-<?php
+        </div>
+        <!--/Blog Section-->
+        <?php
 if ( class_exists( 'WooCommerce' ) ) {
 
     if ( is_account_page() || is_cart() || is_checkout() ) {
@@ -142,12 +144,10 @@ if ( class_exists( 'WooCommerce' ) ) {
     get_sidebar();
 }
 ?>
-</div>
-<!--</div>-->
+    </div>
+    <!--</div>-->
 </section>
 <!-- /Blog & Sidebar Section -->
 
 <?php
 get_footer();
-
-

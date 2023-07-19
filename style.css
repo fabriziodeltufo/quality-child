@@ -46,16 +46,16 @@ h1:hover {
 }
 
 @media (max-width: 768px) {
-  
 
-.section{
-    display: block;
-    align-items: center;
-}
 
-.article{
-    margin: 50px auto;
-}
+    .section {
+        display: block;
+        align-items: center;
+    }
+
+    .article {
+        margin: 50px auto;
+    }
 
 
 
