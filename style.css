@@ -1,0 +1,62 @@
+/*
+Theme Name:   Quality Child
+Theme URI:    https://webriti.com/quality-lite-version-details-page/
+Description:  Quality Child Theme
+Author:       Fabrizio Del Tufo
+Author URI:   
+Template:     quality
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  qualitychild
+*/
+
+
+
+/* CUSTOM CODE CHILD STYLE */
+
+.article {
+    padding: 10px;
+    width: 350px;
+    border: 1px solid lightgrey;
+}
+
+.article h1 {
+    color: white
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h1:hover {
+    color: black;
+}
+
+
+.section {
+    padding: 50px 0;
+    color: white;
+    background: #00a7d1;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px
+}
+
+@media (max-width: 768px) {
+  
+
+.section{
+    display: block;
+    align-items: center;
+}
+
+.article{
+    margin: 50px auto;
+}
+
+
+
+}
