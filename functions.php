@@ -22,10 +22,10 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 // UPDATE POST TEXT 
 function update_post_text_cb( $post_text , $post){
 
-       $post_text = "-FX- Inserisci il testo del post qui ...";
+       $post_text = "Inserisci il testo del post qui ...";
 
        return $post_text ;
 
 }
 
-// add_filter('default_content', 'update_post_text_cb' , 10, 2);
+add_filter('default_content', 'update_post_text_cb' , 10, 2);
