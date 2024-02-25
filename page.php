@@ -3,52 +3,17 @@
 * The main template file
 */
 get_header();
+
+
 ?>
 
 
-<?php if ( is_front_page() ) { ?>
+<!-- CUSTOM CODE  -->
+
+<?php do_action('wp_3_articles'); ?>
 
 <!-- CUSTOM CODE  -->
 
-<section class="section">
-    <?php
-
-$args = array(
-    'posts_per_page' => '3',
-    'order' => 'DESC'
-);
-
-$recent_post = new WP_query( $args );
-
-if ( $recent_post->have_posts() ) {
-    while( $recent_post->have_posts() ) {
-        $recent_post->the_post();
-
-        // var_dump($post);
-        ?>
-
-    <article class="article">
-
-        <a href="<?php the_permalink($post->ID) ?>">
-            <h1><?php the_title(); ?></h1>
-        </a>
-
-        <p><?php the_excerpt();?></p>
-
-    </article>
-
-    <?php
-
-    }
-
-}
-
-?>
-</section>
-
-<!-- CUSTOM CODE  -->
-
-<?php } ?>
 
 
 <!-- Blog & Sidebar Section -->
